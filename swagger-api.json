@@ -1,0 +1,11 @@
+{
+  "input": "http://localhost:5000/swagger/v1/swagger.json",
+  "output": "./src/api/generated",
+  "templates": "./node_modules/swagger-typescript-api/templates",
+  "httpClient": "fetch",
+  "moduleNameIndex": 1,
+  "generateRouteTypes": true,
+  "generateResponses": true,
+  "singleHttpClient": true,
+  "cleanOutput": true
+}
