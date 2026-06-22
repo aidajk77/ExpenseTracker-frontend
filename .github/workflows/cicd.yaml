@@ -50,6 +50,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
+            --build-arg VITE_API_BASE_URL=https://expensetracker-backend-pe55lzh2fa-ew.a.run.app/api \
             -t ${{ env.GCP_REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REPOSITORY }}/${{ env.IMAGE_NAME }}:latest \
             -t ${{ env.GCP_REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
             .
