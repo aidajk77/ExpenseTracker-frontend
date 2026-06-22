@@ -81,4 +81,5 @@ jobs:
           echo "URL: ${{ steps.deploy.outputs.url }}"
 
       - name: Test Frontend URL
-        run: curl -I "${{ steps.deploy.outputs.url }}" || echo "ERROR: Cannot reach frontend URL"
+        run: |
+          curl -I "${{ steps.deploy.outputs.url }}" || echo "ERROR: Cannot reach frontend URL"
